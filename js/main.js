@@ -24,7 +24,7 @@ gsap.defaults({
   ease: "back",
 });
 ScrollTrigger.defaults({
-  markers: true,
+  markers: false,
 });
 
 const ProfileTL = gsap.timeline({
