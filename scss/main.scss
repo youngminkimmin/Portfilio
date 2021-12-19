@@ -1,0 +1,156 @@
+@import "vars";
+@import "mixins";
+
+#intro {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  .video {
+    position: relative;
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+  }
+  .typing {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 64px;
+    font-weight: 100;
+    z-index: 2;
+    text-transform: uppercase;
+    @include longShadow(#111, right, 600);
+    strong {
+      font-weight: 700;
+    }
+  }
+}
+.contentsWrap {
+  position: relative;
+  z-index: 2;
+  background-color: #fff;
+  padding: 100px;
+  margin-top: 100vh;
+  .section {
+    min-height: 100vh;
+    h2 {
+      font-size: 128px;
+      font-weight: 700;
+      text-transform: uppercase;
+      //color: #fff;
+      transform: translate(100px, 20px);
+      border-bottom: 20px solid #111;
+    }
+    .contents {
+      //background-color: #fff;
+      min-height: 500px;
+      border-radius: 80px 80px 0 0;
+    }
+  }
+}
+#profile {
+ 
+  .contents{
+  margin-top: 50px;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 2;
+  transform: translate(100px, 20px);
+}
+}
+
+#history{
+  h2{font-size: 128px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transform: translate(90px, 20px);
+    border-bottom: 20px solid #111;
+    
+  }
+  .historyList{
+    margin-top: 50px;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 2;
+    transform: translate(100px, 20px);
+  }
+}
+
+#result{
+  margin-top: 110px;
+  h2{font-size: 128px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transform: translate(90px, 20px);
+    border-bottom: 20px solid #111;
+    
+  }
+  .resultBox{
+    display: flex;
+    
+    justify-content: space-around;
+    box-sizing: border-box;
+  .listbox{margin-top: 50px;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 2;
+    transform: translate(100px, 20px);
+    border: 2px solid #111;
+    width: 300px;
+    height: 500px;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    a{
+      text-transform: uppercase;
+      
+    }
+  }
+    .box01{
+     background:url(../images/logo/HITOPmian.png) ;
+    }
+    .box02{
+      background: url(../images/logo/NEOmian.png);
+    }
+    .box03{
+      background: url(../images/logo/mariomain.png);
+    }
+    .listbox{
+      background-size: 100% 100%;
+    }
+  }
+}
+
+.cursor{
+  width: 10px;
+  height: 10px;
+  display: flex;
+  border-radius: 100px;
+  background-color: green;
+  justify-content: center;
+  align-content: center;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  position: fixed;
+  left: 100px;
+  top: 100px;
+  user-select: none;
+  transform: translate(-50%,-50%);
+  pointer-events: none;
+  z-index: 99;
+  //display: none;
+}
